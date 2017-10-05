@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width", initial-scale=1>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<script type="text/javascript" src="Bootstrap/js/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="Bootstrap/js/bootstrap.js"></script>
+<title>Admission Status Checker</title>
+<script>
+	function checkStatus()
+{
+	var s1 = f1.score.value;
+	var s2 = f1.course.value;
+	var s3 = f1.grade1.value;
+	var s4 = f1.grade2.value;
+	var s5 = f1.grade3.value;
+	if(s1=="175-184" && s2=="Medical Science")
+	{
+		alert("Your score doesn't fit in for this course, kindly change your course.");
+	}
+	else if (s1=="185-199" && s2=="No Course") 
+	{
+		alert("Your course please?");
+	}
+	else if (s1=="No Score" && s2=="No Course")
+	{
+		alert("Invalid Selection.");
+	}
+	else if (s1=="185-199" && s2=="Medical Science")
+	{
+		alert("Your score doesn't fit in for this course, kindly change your course..");
+	}
+	else if (s3=="D7"||"D8"||"F9"||"Absent" && s5=="A1"||"B2"||"B3"||"C4"||"C5"||"C6") 
+	{
+		alert("At least C6 distinction is required for Mathematics.")
+	}
+}
+
+</script>
+<style type="text/css">
+	body{background-color:#F2F2F2}
+	select{background-color:#F2F2F2}
+</style>
+
+</head>
+
+<body>
+
+		<div class="container-fluid">
+        	<div class="row">
+            	<div class="col-md-12">
+            	<form name="f1">
+              			<table width="40%" class="table-bordered">
+                              <tr>
+                                <td colspan="2"><div class="text-center">Check your addmission status here</div></td>
+                              </tr>
+                              <tr>
+                                <td height="82" colspan="2">
+	                                <div class="form-group"><label class="control-label col-sm-4">Name:</label></div>
+
+	                                <div><input class="form-control" type="text" name"name" style="background-color:#F2F2F2"></div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="45%" height="37"><div class="container-fluid">
+                                								<label>Select Score</label>
+                                								<select id="score">
+	                                								<option>No Score</option>
+	                                								<option>175-184</option>
+	                                								<option>185-199</option>
+	                                								<option>200-250</option>
+	                                								<option>250-300</option>
+	                                								<option>300-350</option>
+	                                								<option>350-400</option>
+                                								</select>
+                                							</div>
+                                </td>
+                                <td width="70%"><div class="container-fluid">
+                                					<label>Select Course</label>
+	                                				<select id="course">
+	                                					<option>No Course</option>
+	                                					<option>Computer Science &amp; Enigneering</option>
+	                                					<option>Medical Science</option>
+	                                					<option>Electrical Engineering</option>
+	                                					<option>Science Laboratory Technology</option>
+	                                					<option>Accounting</option>
+	                                					<option>Transport</option>
+	                                					<option>Food Science &amp; Engineering</option>
+	                                					<option>Mechanical Engineering</option>
+	                                					<option>Fine &amp; Applied Art</option>
+	                                				</select>
+                                				</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="47" width="60%">
+                                	<div class="container-fluid">
+                                		<label  disabled="disabled">Mathematics</label>
+                                		
+                                	</div>
+                                </td>
+                                <td>
+                                	<div class="container-fluid">
+                                		<label>Grade</label>
+                                		<select id="grade1">
+                                						<option>No Grade</option>
+                                						<option>A1</option>
+	                                					<option>B2</option>
+	                                					<option>B3</option>
+	                                					<option>C4</option>
+	                                					<option>C5</option>
+	                                					<option>C6</option>
+	                                					<option name="fail">D7</option>
+	                                					<option name="fail">D8</option>
+	                                					<option name="fail">F9</option>
+	                                					<option name="fail">Absent</option>
+                                		</select>
+                                	</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="39">
+                                	<div class="container-fluid">
+                                		<label  disabled="disabled">Use OF English</label>
+                                		
+                                	</div>
+                                </td>
+                                <td>
+                                	<div class="container-fluid">
+                                		<label>Grade</label>
+                                		<select id="grade2">
+                                						<option>No Grade</option>
+                                						<option>A1</option>
+	                                					<option>B2</option>
+	                                					<option>B3</option>
+	                                					<option>C4</option>
+	                                					<option>C5</option>
+	                                					<option>C6</option>
+	                                					<option name="fail">D7</option>
+	                                					<option name="fail">D8</option>
+	                                					<option name="fail">F9</option>
+	                                					<option name="fail">Absent</option>
+                                		</select>
+                                	</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="42">
+                                	<div class="container-fluid">
+                                		<label>Select Subject</label>
+                                		<select>
+                                						<option>No Subject</option>
+	                                					<option>Biology</option>
+	                                					<option>Physics</option>
+	                                					<option>Chemistry</option>
+	                                					<option>Economics</option>
+	                                					<option>Agricultural Science</option>
+	                                					<option>Yoruba</option>
+	                                					<option>Geography</option>
+	                                					<option>ICT</option>
+	                                					<option>Government</option>
+                                		</select>
+                                	</div>
+                                </td>
+                                <td>
+                                	<div class="container-fluid">
+                                		<label>Grade</label>
+                                		<select>
+                                						<option>No Grade</option>
+                                						<option>A1</option>
+	                                					<option>B2</option>
+	                                					<option>B3</option>
+	                                					<option>C4</option>
+	                                					<option>C5</option>
+	                                					<option>C6</option>
+	                                					<option name="fail">D7</option>
+	                                					<option name="fail">D8</option>
+	                                					<option name="fail">F9</option>
+	                                					<option name="fail">Absent</option>
+                                		</select>
+                                	</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="43">
+                                	<div class="container-fluid">
+                                		<label>Select Subject</label>
+                                		<select id="grade3">
+                                						<option>No Subject</option>
+	                                					<option>Biology</option>
+	                                					<option>Physics</option>
+	                                					<option>Chemistry</option>
+	                                					<option>Economics</option>
+	                                					<option>Agricultural Science</option>
+	                                					<option>Yoruba</option>
+	                                					<option>Geography</option>
+	                                					<option>ICT</option>
+	                                					<option>Government</option>
+                                		</select>
+                                	</div>
+                                </td>
+                                <td>
+                                	<div class="container-fluid">
+                                		<label>Grade</label>
+                                		<select>
+                                						<option>No Grade</option>
+                                						<option>A1</option>
+	                                					<option>B2</option>
+	                                					<option>B3</option>
+	                                					<option>C4</option>
+	                                					<option>C5</option>
+	                                					<option>C6</option>
+	                                					<option name="fail">D7</option>
+	                                					<option name="fail">D8</option>
+	                                					<option name="fail">F9</option>
+	                                					<option name="fail">Absent</option>
+                                		</select>
+                                	</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="43">
+                                	<div class="container-fluid">
+                                		<label>Select Subject</label>
+                                		<select>
+                                						<option>No Subject</option>
+	                                					<option>Biology</option>
+	                                					<option>Physics</option>
+	                                					<option>Chemistry</option>
+	                                					<option>Economics</option>
+	                                					<option>Agricultural Science</option>
+	                                					<option>Yoruba</option>
+	                                					<option>Geography</option>
+	                                					<option>ICT</option>
+	                                					<option>Government</option>
+                                		</select>
+                                	</div>
+                                </td>
+                                <td>
+                                	<div class="container-fluid">
+                                		<label>Grade</label>
+                                		<select id="grade3">
+                                						<option>No Grade</option>
+                                						<option>A1</option>
+	                                					<option>B2</option>
+	                                					<option>B3</option>
+	                                					<option>C4</option>
+	                                					<option>C5</option>
+	                                					<option>C6</option>
+	                                					<option name="fail">D7</option>
+	                                					<option name="fail">D8</option>
+	                                					<option name="fail">F9</option>
+	                                					<option name="fail">Absent</option>
+                                		</select>
+                                	</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="46">
+                                	<div class="container-fluid">
+                                		<label>Select Subject</label>
+                                		<select>
+                                						<option>No Subject</option>
+	                                					<option>Biology</option>
+	                                					<option>Physics</option>
+	                                					<option>Chemistry</option>
+	                                					<option>Economics</option>
+	                                					<option>Agricultural Science</option>
+	                                					<option>Yoruba</option>
+	                                					<option>Geography</option>
+	                                					<option>ICT</option>
+	                                					<option>Government</option>
+                                		</select>
+                                	</div>
+                                </td>
+                                <td>
+                                	<div class="container-fluid">
+                                		<label>Grade</label>
+                                		<select id="grade3">
+                                						<option>No Grade</option>
+                                						<option>A1</option>
+	                                					<option>B2</option>
+	                                					<option>B3</option>
+	                                					<option>C4</option>
+	                                					<option>C5</option>
+	                                					<option>C6</option>
+	                                					<option name="fail">D7</option>
+	                                					<option name="fail">D8</option>
+	                                					<option name="fail">F9</option>
+	                                					<option name="fail">Absent</option>
+                                		</select>
+                                	</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="41">
+                                	<div class="container-fluid">
+                                		<label>Select Subject</label>
+                                		<select>
+                                						<option>No Subject</option>
+	                                				
+	                                					<option>Biology</option>
+	                                					<option>Physics</option>
+	                                					<option>Chemistry</option>
+	                                					<option>Economics</option>
+	                                					<option>Agricultural Science</option>
+	                                					<option>Yoruba</option>
+	                                					<option>Geography</option>
+	                                					<option>ICT</option>
+	                                					<option>Government</option>
+                                		</select>
+                                	</div>
+                                </td>
+                                <td>
+                                	<div class="container-fluid">
+                                		<label>Grade</label>
+                                		<select id="grade3">
+                                						<option>No Grade</option>
+                                						<option>A1</option>
+	                                					<option>B2</option>
+	                                					<option>B3</option>
+	                                					<option>C4</option>
+	                                					<option>C5</option>
+	                                					<option>C6</option>
+	                                					<option name="fail">D7</option>
+	                                					<option name="fail">D8</option>
+	                                					<option name="fail">F9</option>
+	                                					<option name="fail">Absent</option>
+                                		</select>
+                                	</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="45">
+                                	<div class="container-fluid">
+                                		<label>Select Subject</label>
+                                		<select>
+                                						<option>No Subject</option>
+	                                					
+	                                					<option>Biology</option>
+	                                					<option>Physics</option>
+	                                					<option>Chemistry</option>
+	                                					<option>Economics</option>
+	                                					<option>Agricultural Science</option>
+	                                					<option>Yoruba</option>
+	                                					<option>Geography</option>
+	                                					<option>ICT</option>
+	                                					<option>Government</option>
+                                		</select>
+                                	</div>
+                                </td>
+                                <td>
+                                	<div class="container-fluid">
+                                		<label>Grade</label>
+                                		<select id="grade3">
+                                						<option>No Grade</option>
+                                						<option>A1</option>
+	                                					<option>B2</option>
+	                                					<option>B3</option>
+	                                					<option>C4</option>
+	                                					<option>C5</option>
+	                                					<option>C6</option>
+	                                					<option name="fail">D7</option>
+	                                					<option name="fail">D8</option>
+	                                					<option name="fail">F9</option>
+	                                					<option name="fail">Absent</option>
+                                		</select>
+                                	</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="41">
+                                	<div class="container-fluid">
+                                		<label>Select Subject</label>
+                                		<select>
+                                						<option>No Subject</option>
+	                                					
+	                                					<option>Biology</option>
+	                                					<option>Physics</option>
+	                                					<option>Chemistry</option>
+	                                					<option>Economics</option>
+	                                					<option>Agricultural Science</option>
+	                                					<option>Yoruba</option>
+	                                					<option>Geography</option>
+	                                					<option>ICT</option>
+	                                					<option>Government</option>
+                                		</select>
+                                	</div>
+                                </td>
+                                <td>
+                                	<div class="container-fluid">
+                                		<label>Grade</label>
+                                		<select id="grade3">
+                                						<option>No Grade</option>
+                                						<option>A1</option>
+	                                					<option>B2</option>
+	                                					<option>B3</option>
+	                                					<option>C4</option>
+	                                					<option>C5</option>
+	                                					<option>C6</option>
+	                                					<option name="fail">D7</option>
+	                                					<option name="fail">D8</option>
+	                                					<option name="fail">F9</option>
+	                                					<option name="fail">Absent</option>
+                                		</select>
+                                	</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="40" colspan="2" rowspan="2">
+                                	<input class="col-md-offset-5 btn-success" type="button" value="Check Status" onclick="checkStatus()">
+                                </td>
+                             
+                              </tr>
+                          
+                           </table>
+                           </form>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
